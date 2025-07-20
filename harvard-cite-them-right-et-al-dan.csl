@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0">
+  <info>
+    <title>Harvard - Cite Them Right (et al. min=3, and→dan)</title>
+    <id>http://www.zotero.org/styles/harvard-cite-them-right-et-al-dan</id>
+    <link href="http://www.zotero.org/styles/harvard-cite-them-right" rel="template"/>
+    <author>
+      <name>Modifikasi oleh ChatGPT untuk User</name>
+    </author>
+    <updated>2025-07-20T00:00:00+00:00</updated>
+  </info>
+  <macro name="author">
+    <names variable="author">
+      <name and="text" delimiter=", " delimiter-precedes-last="always" name-as-sort-order="all" sort-separator=", " initialize-with="."/>
+      <label form="short" prefix=" "/>
+      <et-al min="3" use-first="1" term="et-al"/>
+      <substitute>
+        <names variable="editor"/>
+        <text variable="title"/>
+      </substitute>
+    </names>
+  </macro>
+  <locale xml:lang="en">
+    <terms>
+      <term name="and">dan</term>
+    </terms>
+  </locale>
+  <citation>
+    <layout prefix="(" suffix=")" delimiter="; ">
+      <text macro="author"/>
+      <text variable="issued" prefix=", " form="year"/>
+    </layout>
+  </citation>
+  <bibliography>
+    <layout hanging-indent="true" delimiter=". ">
+      <text macro="author"/>
+      <text variable="issued" prefix=" (" suffix=")"/>
+      <text variable="title" prefix=". "/>
+      <text variable="container-title" prefix=". "/>
+      <text variable="publisher" prefix=". "/>
+    </layout>
+  </bibliography>
+</style>
